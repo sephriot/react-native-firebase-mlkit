@@ -1,8 +1,8 @@
 {
   "name": "react-native-firebase-mlkit",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "description": "Text Recognition in image for react native using firebase ML Kit",
-  "homepage": "https://github.com/mateusc42/react-native-firebase-mlkit",
+  "homepage": "https://github.com/sephriot/react-native-firebase-mlkit",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,9 +10,9 @@
   "keywords": [
     "react-native"
   ],
-  "author": "Mateus Cardoso",
+  "author": "Jakub Wójtowicz",
   "license": "MIT",
   "peerDependencies": {
-    "react-native": "^0.55.3"
+    "react-native": "^0.66.1"
   }
 }
