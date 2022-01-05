@@ -47,7 +47,7 @@ public class RNMlKitModule extends ReactContextBaseJavaModule {
                           .addOnSuccessListener(new OnSuccessListener<Text>() {
                               @Override
                               public void onSuccess(Text visionText) {
-                                  promise.resolve(visionText);
+                                  promise.resolve(visionText.getText());
                               }
                           })
                           .addOnFailureListener(
