@@ -21,6 +21,8 @@ import com.google.mlkit.vision.text.TextRecognition;
 import com.google.mlkit.vision.text.TextRecognizer;
 import com.google.mlkit.vision.text.TextRecognizerOptionsInterface;
 
+import static com.google.mlkit.vision.text.TextRecognizerOptions.DEFAULT_OPTIONS
+
 import java.io.IOException;
 import java.util.List;
 import java.util.ArrayList;
@@ -64,7 +66,7 @@ public class RNMlKitModule extends ReactContextBaseJavaModule {
 
   private TextRecognizer getTextRecognizerInstance() {
     if (this.textRecognizer == null) {
-      this.textRecognizer = TextRecognition.getClient(TextRecognizerOptionsInterface.LATIN);
+      this.textRecognizer = TextRecognition.getClient(DEFAULT_OPTIONS);
     }
     return this.textRecognizer;
   }
