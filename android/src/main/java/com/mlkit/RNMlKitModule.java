@@ -40,8 +40,8 @@ public class RNMlKitModule extends ReactContextBaseJavaModule {
       try {
           InputImage image = InputImage.fromFilePath(this.reactContext, android.net.Uri.parse(uri));
           TextRecognizer recognizer = this.getTextRecognizerInstance();
-          Task<FirebaseVisionText> result =
-                  recognizer.processImage(image)
+          Task<Text> result =
+                  recognizer.process(image)
                           .addOnSuccessListener(new OnSuccessListener<Text>() {
                               @Override
                               public void onSuccess(Text visionText) {
@@ -62,11 +62,11 @@ public class RNMlKitModule extends ReactContextBaseJavaModule {
       }
   }
 
-  private FirebaseVisionTextRecognizer getTextRecognizerInstance() {
-    if (this.textDetector == null) {
-      this.textDetector = TextRecognition.getClient(TextRecognizerOptions.DEFAULT_OPTIONS);
+  private TextRecognizer getTextRecognizerInstance() {
+    if (this.textRecognizer == null) {
+      this.textRecognizer = TextRecognition.getClient(TextRecognizerOptions.DEFAULT_OPTIONS);
     }
-    return this.textDetector;
+    return this.textRecognizer;
   }
 
   @Override
